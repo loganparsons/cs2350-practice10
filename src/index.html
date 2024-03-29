@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Project Starter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="TODO: A starter project for ..." />
 
-    <link rel="stylesheet" href="./stylesheets/main.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Postcards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Postcards" />
 
-  <body>
-    <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5">
-      <span class="d-block py-5">
-        <i class="bi bi-filetype-html text-primary"></i>
-        <i class="bi bi-filetype-css text-danger"></i>
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
+  <link rel="stylesheet" href="./stylesheets/main.css" />
+  <script type="module" src="./javascripts/main.js"></script>
+</head>
 
-      Welcome to CS 2350!
-    </h1>
+<body>
 
-    <script type="module" src="./javascripts/main.js"></script>
-  </body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logan Parsons</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cards">Current Postcards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <button class="btn btn-success ms-auto" id="new_card">New Postcard</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron container-fluid py-5">
+    <div class="py-5 text-light">
+      <h1 class="display-4">See the world!</h1>
+      <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa aspernatur id officiis
+        reprehenderit laborum voluptas saepe delectus harum, soluta ex! Ut quod officiis maxime sapiente distinctio
+        consequatur cupiditate deleniti minima.</p>
+    </div>
+
+  </div>
+
+  <div class="container my-3">
+    <h1>Current Postcards</h1>
+    <form id="myForm" class="d-none" method="post">
+      <div class="mb-3">
+        <label for="place" class="form-label">Place</label>
+        <input type="text" class="form-control" id="place" name="place" placeholder="Enter place here">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" placeholder="Enter description here"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="poster" class="form-label">Poster</label>
+        <input type="url" class="form-control" id="poster" name="poster" placeholder="Enter poster url">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-danger to-cancel">Cancel</button>
+    </form>
+
+    <div class="row row-cols-2 my-5" id="cards"></div>
+
+  </div>
+
+  <footer class="mt-4 bg-dark py-5 text-light">
+    <p class="lead text-center">&copy: All Rights Reserved</p>
+  </footer>
+
+</body>
+
 </html>
